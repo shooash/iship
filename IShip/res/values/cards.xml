@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="msgA0">Hello world!</string>
+<string name="norepA0">Поехали!@A1</string>
+<string name="actA0">A1@2</string>
+<string name="msgA1">...ну давай, запускайся уже, кусок железа. Мы не можем ждать здесь еще тысячу лет"</string>
+<string name="repA1">Вам не разрешен доступ к системе!@A3@@Не понимаю! Повторите запрос!@A2@@Добро пожаловать, капитан!@A3</string>
+<string name="msgA2">Хорошо. Попробуем еще раз. Терпение, только терпение... За—гру—жай! Ну как?"</string>
+<string name="repA2">Вам не разрешен доступ к системе!@A4@@Не понимаю! Повторите запрос!@A4@@Добро пожаловать, капитан!@A3</string>
+<string name="msgA3">Вот, так бы сразу...</string>
+<string name="repA3">Xopowo@end</string>
+<string name="msgA4">Вот черт. ГАРРИ, ГДЕ ЭТА ЧЕРТОВА КНОПКА ПЕРЕЗАГРУЗКИ? Ага, ну ка</string>
+<string name="actA4">A0@2</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="top"
+	android:orientation="vertical"
+	android:background="#000000">
+
+	<TextView
+		android:text="@string/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="top|center"
+		android:textColor="#FFFFFF"
+		android:textSize="70sp"
+		android:id="@+id/mainTitle"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="wrap_content"
+		android:text="Medium Text"
+		android:textColor="#FFFFFF"
+		android:id="@+id/mainMessage"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:text="Small Text"
+		android:textColor="#FFFFFF"
+		android:id="@+id/FirstRep"
+		android:layout_margin="10dp"
+		android:onClick="onRepClick"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:text="Small Text"
+		android:textColor="#FFFFFF"
+		android:id="@+id/SecondRep"
+		android:layout_margin="10dp"
+		android:onClick="onRepClick"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content"
+		android:text="Small Text"
+		android:textColor="#FFFFFF"
+		android:id="@+id/ThirdRep"
+		android:layout_margin="10dp"
+		android:onClick="onRepClick"/>
+
+</LinearLayout>
+
