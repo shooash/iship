@@ -20,10 +20,7 @@ public class MainActivity extends Activity
 		runner();
     }
 	
-	public void finishme(){
-		this.finish();
-	}
-	
+
 	//SETTINGS
 	public static final int MAX_REPS = 3;
 	public static final int MAX_WORK = 2;
@@ -78,16 +75,18 @@ public class MainActivity extends Activity
 			if(i==0) return false;
 			String[] work = new String[MAX_WORK];
 			work = getString(i).split("@",MAX_WORK);
-			//myreps[0].setText(work[1].replaceAll("[\\D]",""));
+			chapter="";
 			chapter = work[0];
-			//if(work.length<2) return true;
+			if(work.length<2) return true;
 			i=Integer.parseInt(work[1].replaceAll("[\\D]","")); //wait time in seconds
-			try {
-				Thread.sleep(1000);                 //1000 milliseconds is one second.
-			} catch(InterruptedException ex) {
-				Thread.currentThread().interrupt();
-			}
-			return true;
+
+			mHandler.postDelayed(new Runnable() {
+					public void run() {
+						runner();
+					}
+				}, i*1000);
+
+			return false;
 		}
 		
 		//more options
@@ -131,30 +130,12 @@ public class MainActivity extends Activity
 			int i = getResources().getIdentifier("act" + id, "string", getPackageName());
 			if(i==0) return false;
 			String[] work = new String[MAX_WORK];
-			//myreps[0].setText(getString(i));
-			//myreps[0].setVisibility(View.VISIBLE);
 			work = getString(i).split("@",MAX_WORK);
 			chapter="";
 			chapter = work[0];
 			if(work.length<2) return true;
 			i=Integer.parseInt(work[1].replaceAll("[\\D]","")); //wait time in seconds
-			//blankall();
-			/*try
-			{
-				wait(1000);
-			}
-			catch (InterruptedException e)
-			{
-				finish();
-			}*/
 			
-			/*try
- 			{
-				Thread.sleep(i*1000);                 //1000 milliseconds is one second.
-				
-				} catch(InterruptedException ex) {
-					Thread.currentThread().interrupt();
-				}//*/
 			mHandler.postDelayed(new Runnable() {
 					public void run() {
 						runner();
@@ -212,13 +193,12 @@ public class MainActivity extends Activity
 	}
 	
 	private void runner(){ //return: repeat?
-		//while(mycard.chapter != "" && mycard.chapter != "end"){
 		if(mycard.chapter.equals("end")) finish();
 		else {
 			blankall();
 			mycard.showmessage();
 			if(mycard.showreps()) return;
-			if(!mycard.action(mycard.chapter)) return;
+			if(!mycard.action()) return;
 		} 
 	}
 };//MainActivity
